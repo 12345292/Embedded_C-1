@@ -12,6 +12,8 @@ void set_PWM(void)
      TCCR1B |= (1<<WGM12)| (1<<CS11) | (1<<CS10);
 }
 
+
+// Formula = (1024* %dutycycle)-1
 void out_PWM(uint16_t val)
 {
     if((val>=0) && (val<=209))
