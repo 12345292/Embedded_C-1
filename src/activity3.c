@@ -16,25 +16,25 @@ void set_PWM(void)
 // Formula = (1024* %dutycycle)-1
 void out_PWM(uint16_t val)
 {
-    if((val>=0) && (val<=209))
+    if((val>=0) && (val<=200))
     {
 
         OCR1A = 204; //20% duty cycle
         
     }
-    else if((val>=210) && (val<=509))
+    else if((val>=201) && (val<=500))
     {
 
         OCR1A = 409; //40% duty cycle
         
     }
-    else if((val>=510) && (val<=709))
+    else if((val>=501) && (val<=700))
     {
 
         OCR1A = 716;//70% duty cycle
         
     }
-    else if((val>=710) && (val<=1024))
+    else if((val>=701) && (val<=1024))
     {
 
         OCR1A = 972; //95% duty cycle
